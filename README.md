@@ -29,5 +29,3 @@
 - implement debounce for some input fields
 
 ---
-
-The project can be previewed [here](https://zetta-test.netlify.app/)
