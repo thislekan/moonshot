@@ -1,0 +1,21 @@
+.dates {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 2rem;
+
+  input {
+    width: 10rem;
+    // text-align: center;
+  }
+
+  label {
+    font-weight: 500;
+    margin-right: 1rem;
+  }
+
+  &__start {
+    margin-right: 2rem;
+  }
+}

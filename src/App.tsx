@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./index.scss";
+import MapChart from "./components/maps";
+import { MapContextProvider } from "./components/context";
+import Pagination from "./components/controls/pagination";
+import DatesComponent from "./components/controls/calendars";
+import StatusFilter from "./components/controls/filters/successFilter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MapContextProvider>
+      <div className="App">
+        <div className="control">
+          <StatusFilter />
+          <DatesComponent />
+          <Pagination />
+        </div>
+        <div className="map">
+          <MapChart geoUrl="https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json" />
+        </div>
+      </div>
+    </MapContextProvider>
   );
 }
 
